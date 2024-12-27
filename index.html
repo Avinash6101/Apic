@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIC - Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            background: #ffffff10;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="signInContainer">
+        <h1>Sign In</h1>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="signIn()">Sign In</button>
+    </div>
+
+    <div class="footer">
+        © 2024 APIC by Avinash. All Rights Reserved.
+    </div>
+
+    <script>
+        // Sample credentials (For demonstration purposes only)
+        const validUsername = "user";
+        const validPassword = "password123";
+
+        function signIn() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the main page after successful sign-in
+                window.location.href = "main.html"; // This redirects to the main page (main.html)
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
